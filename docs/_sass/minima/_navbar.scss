@@ -1,0 +1,246 @@
+.nav-bar {
+    padding: 8px 16px;
+    height: 40px;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $primary-darker;
+    color: $secondary-darker;
+    overflow: hidden;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  
+    .nav-bar-content {
+      display: flex;
+      max-width: 100%;
+      justify-content: space-between;
+      .nav-logo {
+        margin-top: 7px;
+        height: 25px;
+        cursor: pointer;
+      }
+  
+      .nav-container {
+        .nav-item {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  .root.change {
+    min-height: 100%;
+    overflow: hidden;
+  }
+  
+  .toggle-container{
+    margin-top: 13px;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+      cursor: pointer;
+      height: 24px;
+    }
+  
+  
+    .bar1, .bar2, .bar3 {
+      width: 20px;
+      height: 2px;
+      background-color: #fff;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+  
+    .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-2px, 6px) ;
+      transform: rotate(-45deg) translate(-2px, 6px) ;
+    }
+  
+    .change .bar2 {opacity: 0;}
+  
+    .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-2px, -6px) ;
+      transform: rotate(45deg) translate(-2px, -6px) ;
+    }
+  
+  .nav-bar.change {
+    height: 100vh;
+  
+    .nav-bar-content {
+      .nav-container {
+        height: 100vh;
+        //opacity: 0.9;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+  
+        .nav-item {
+          display: block;
+          font-size: 2em;
+          line-height: 1.6em;
+          background-color: $primary-darker;
+          color: $secondary-darker;
+          cursor: pointer;
+        }
+  
+        .nav-item.active {
+          color: $accent;
+        }
+  
+      }
+    }
+  }
+  
+  
+  footer {
+    // height: 100px;
+    background: $primary-darker;
+    color: $secondary
+  }
+  
+  @media all and (max-width: $screen-sm) {
+    div.nav-item {
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+  
+  }
+  
+  @media only screen and (max-width: $screen-xs) {
+    footer {
+      font-size: 14px;
+    }
+  }
+  
+  
+  @media only screen and (min-width: $screen-sm) {
+    div.toggle-container {
+      display: none;
+      .bar1{
+          display: none;
+      }
+      .bar2{
+          display: none;
+      }
+      .bar3{
+          display: none;
+      }
+    }
+  
+    .nav-bar {
+      padding: 8px 16px;
+      height: 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: $primary-darker;
+      color: $secondary-darker;
+      overflow: hidden;
+  
+      .nav-bar-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 720px;
+  
+        .nav-container {
+          .nav-item {
+            display: block;
+          }
+        }
+      }
+    }
+    .nav-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      transition: opacity .35s ease .75s;
+    }
+  
+    .nav-container div {
+      display: block;
+      position: relative;
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      padding: 0 10px 0 10px;
+      outline: none;
+      cursor: pointer;
+      color: #b0b2c3;
+      transition: color .35s ease
+    }
+  
+    .nav-container div:before {
+      background-color: $accent-darker;
+      transition: all .25s cubic-bezier(.694, .048, .335, 1) .15s
+    }
+  
+    .nav-container div:after, .nav-container div:before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+      left: auto;
+      width: 0;
+      height: 3px;
+      z-index: 2
+    }
+  
+    .nav-container div:after {
+      background-color: $accent;
+      transition: all .25s cubic-bezier(.694, .048, .335, 1)
+    }
+  
+    .nav-container div:hover {
+      color: $secondary;
+      text-decoration: none
+    }
+  
+    .nav-container div.active {
+      color: #fff;
+    }
+    .nav-container div:hover:after, .nav-container div:hover:before {
+      width: 100%;
+      left: 0
+    }
+  
+    .content {
+      top: 56px;
+      left: 0;
+      right: 0;
+    }
+  
+    main {
+      top: 56px;
+      overflow-y: auto;
+    }
+  
+  }
+  
+  @media only screen and (min-width: $screen-md) {
+    .nav-bar{
+      .nav-bar-content {
+        width: 960px;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: $screen-lg) {
+    .nav-bar{
+      .nav-bar-content {
+        width: 1140px;
+      }
+    }
+  
+  }
+  
+  

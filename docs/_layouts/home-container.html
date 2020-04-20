@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content home" aria-label="Content">
+        <div class="home-header">
+            <div class="wrapper">
+              <div class="header-container">
+                <div class='avatar-frame'>
+                    <img src='assets/about_portrait.jpg' />
+                  </div>
+                  <div>
+                      <h1>Richard Muscat Blog</h1>
+                      <p></p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
