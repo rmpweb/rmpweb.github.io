@@ -3,7 +3,7 @@ layout: post
 title:  "Unsubscribe from RxJS Observables"
 ---
 
-![](/rmb/assets/rxjsng.png)
+![](/assets/rxjsng.png)
 
 When a component which is subscribed to an observable, gets destroyed by Angular, the subscription holds a reference to the component instance, preventing it from being available for garbage collection. Hence failing to unsubscribe an observable can lead to a memory leak.
 

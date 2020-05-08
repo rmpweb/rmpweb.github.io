@@ -21,8 +21,8 @@
 title: Richard Muscat | Blog
 email: info@richardmuscat.com
 description: >- # this means to ignore newlines until "baseurl:"
-baseurl: "/rmb" # the subpath of your site, e.g. /blog
-url: "https://www.richardmuscat.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://blog.richardmuscat.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 linkedin_username: richard-muscat
