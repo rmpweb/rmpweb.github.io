@@ -61,7 +61,7 @@ export abstract class BaseComponent implements OnDestroy {
     }
 }
 
-export class SomeComponent extends BaseComponent {
+export class SomeComponent extends BaseComponent implements OnInit {
 
     constructor(
         private someService: SomeService
