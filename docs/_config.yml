@@ -26,6 +26,7 @@ url: "https://blog.richardmuscat.com" # the base hostname & protocol for your si
 # twitter_username: jekyllrb
 # github_username:  jekyll
 linkedin_username: richard-muscat
+google_analytics: UA-163610418-1
 
 # Build settings
 theme: minima
