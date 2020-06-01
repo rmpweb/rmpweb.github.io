@@ -3,7 +3,7 @@ layout: post
 title:  "RxJS Higher-order Observables"
 ---
 
-![](/assets/hoo.svg)
+![](/assets/hoo.png)
 
 Observables that emit numbers, strings, objects or arrays are referred to as first-order observables. Higher-order observables are observables that emit an observable. There are scenarios where we need to process the results of a first observable into a second observable. For instance, consider the example below: 
 
