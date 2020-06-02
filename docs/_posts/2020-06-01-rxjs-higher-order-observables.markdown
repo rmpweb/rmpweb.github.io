@@ -27,7 +27,7 @@ The most commonly used operators are `concatMap`, `mergeMap` and `switchMap`
 # ConcatMap
 
 
-The `concatMap` operator processes items in sequence. When the outer observable emits items, concatmap subscribes to the first inner observable. Once it completes it emits the result to the output stream and then subscribes to the next inner observable. The process repeats until all items complete.
+The `concatMap` operator processes items in sequence. When the outer observable emits items, `concatMap` subscribes to the first inner observable. Once it completes it emits the result to the output stream and then subscribes to the next inner observable. The process repeats until all items complete.
 
 {% highlight typescript %}
 of(4, 1, 3)
