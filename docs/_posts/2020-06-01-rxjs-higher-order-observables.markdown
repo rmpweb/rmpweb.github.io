@@ -5,7 +5,7 @@ title:  "RxJS Higher-order Observables"
 
 ![](/assets/hoo.png)
 
-Observables that emit numbers, strings, objects or arrays are referred to as first-order observables. Higher-order observables are observables that emit an observable. There are scenarios where we need to process the results of a first observable into a second observable. For instance, consider the example below: 
+Observables that emit numbers, strings, objects or arrays are referred to as first-order observables. Higher-order observables emit an observable. There are scenarios where we need to process the results of a first observable into a second observable. For instance, consider the example below: 
 
 
 {% highlight typescript %}
@@ -16,7 +16,7 @@ of(4, 1, 3)
 {% endhighlight %}
 
 
-However we should avoid nested subscribes. They can become complex and it would be difficult to unsubscribe observables. This is where high-order mapping operators come into play.
+In this example we have nested subscribes. We should avoid them as they can become complex and it would be difficult to unsubscribe observables. This is where high-order mapping operators come into play.
 
 # High Order Mapping operators
 
